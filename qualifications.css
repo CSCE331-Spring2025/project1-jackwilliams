@@ -1,0 +1,105 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #303030;
+}
+.navbar_q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+.nav-item_q {
+  margin: 0 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+}
+.nav-item_q:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+.nav-item_q.active {
+  border: 2px solid white;
+  background-color: #444;
+}
+.header_q {
+  text-align: center;
+  background-color: #90a8c3;
+  color: white;
+  padding: 40px 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.description_q {
+  text-align: center;
+  margin: 60px;
+  font-size: 25px;
+  color: white;
+}
+.about-me_q {
+  font-weight: bold;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.paragraph_q {
+  text-align: center;
+  font-size: 18px;
+  margin: 100px 0;
+  color: #333;
+}
+.container_q {
+  margin: 0px;
+}
+.contact-info_q {
+  background-color: #999595;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.contact-content_q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section_q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.image-box_q {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_q {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.horizontal-box_q {
+  border: 2px solid #030c2e;
+  background-color: #90a8c3;
+  padding: 10px;
+  height: auto;
+  display: inline-block;
+  border-radius: 10px;
+}
+.bullet-points_q {
+  color: white;
+  margin: 30px auto;
+  font-size: 20px;
+  max-width: 80%;
+}
