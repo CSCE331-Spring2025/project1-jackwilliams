@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack W Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css" />
+    <link id="theme-link" rel="stylesheet" href="portfolio(og).css" />
   </head>
   <body>
     
@@ -14,6 +14,7 @@
       <a href="index.html" class="nav-item_p">Jack W</a>
       <a href="portfolio.html" class="nav-item_p active">Portfolio</a>
       <a href="qualifications.html" class="nav-item_p">Qualifications</a>
+      <a id="styleSwitchBtn" class="nav-item_p">Switch Style</a>
     </div>
 
     
@@ -68,6 +69,8 @@
         <div class="about-me_p">Arduino</div>
       </div>
 
+      
+
       <br/>
   
       <div class="horizontal-box_p">
@@ -87,5 +90,22 @@
 
     <br />
     <br />
+
+    <script>
+
+      const switchBtn = document.getElementById('styleSwitchBtn');
+      const themeLink = document.getElementById('theme-link');
+
+
+      switchBtn.addEventListener('click', function() {
+
+        if (themeLink.getAttribute('href') === 'portfolio(og).css') {
+          themeLink.setAttribute('href', 'portfolio.css');
+        } else {
+          themeLink.setAttribute('href', 'portfolio(og).css');
+        }
+      });
+    </script>
+
   </body>
 </html>

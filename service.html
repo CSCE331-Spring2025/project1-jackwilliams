@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack W Portfolio</title>
-    <link rel="stylesheet" href="service.css" />
+    <link id="theme-link" rel="stylesheet" href="service(og).css" />
     
   </head>
   <body>
@@ -15,6 +15,7 @@
       <a href="index.html" class="nav-item_s">Jack W</a>
       <a href="portfolio.html" class="nav-item_s">Portfolio</a>
       <a href="qualifications.html" class="nav-item_s">Qualifications</a>
+      <a id="styleSwitchBtn" class="nav-item_s">Switch Style</a>
     </div>
 
     
@@ -96,5 +97,21 @@
 
     <br />
     <br />
+
+    <script>
+
+      const switchBtn = document.getElementById('styleSwitchBtn');
+      const themeLink = document.getElementById('theme-link');
+
+
+      switchBtn.addEventListener('click', function() {
+
+        if (themeLink.getAttribute('href') === 'service(og).css') {
+          themeLink.setAttribute('href', 'service.css');
+        } else {
+          themeLink.setAttribute('href', 'service(og).css');
+        }
+      });
+    </script>
   </body>
 </html>

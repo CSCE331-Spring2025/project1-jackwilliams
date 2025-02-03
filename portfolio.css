@@ -1,104 +1,109 @@
 body {
-    font-family: "Arial", sans-serif;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    background-color: #303030;
-  }
-  .navbar_p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 0;
-  }
-  .nav-item_p {
-    margin: 0 20px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid transparent;
-  }
-  .nav-item_p:hover {
-    background-color: #555;
-    cursor: pointer;
-  }
-  .nav-item_p.active {
-    border: 2px solid white;
-    background-color: #444;
-  }
-  .header_p {
-    text-align: center;
-    background-color: #90a8c3;
-    color: white;
-    padding: 40px 20px;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .description_p {
-    text-align: center;
-    margin: 60px;
-    font-size: 25;
-    color: white;
-  }
-  .about-me_p {
-    font-weight: bold;
-    font-size: 34px;
-    text-align: center;
-    margin-top: 10px;
-    color: #ffffff;
-  }
-  .paragraph_p {
-    text-align: center;
-    font-size: 18px;
-    margin: 100px 0;
-    color: #333;
-  }
-  .container_p {
-    margin: 0px;
-  }
-  .contact-info_p {
-    background-color: #999595;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .contact-content_p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .section_p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-  }
-  .image-box_p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer_p {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-  }
-  .image-box_p img {
-    width: 50%; 
-    height: auto; 
-    max-width: 100%; 
-  }
-  .horizontal-box_p {
-    border: 2px solid #030c2e; 
-    background-color: #90a8c3;
-    padding: 10px; 
-    height: auto; 
-    display: inline-block; 
-    border-radius: 10px; 
-  }
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #90a8c3, #070e28) no-repeat;
+}
+.navbar_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+.nav-item_p {
+  margin: 0 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.nav-item_p:hover {
+  background-color: #555;
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
+.nav-item_p.active {
+  border: 2px solid white;
+  background-color: #444;
+}
+.header_p {
+  text-align: center;
+  background-color: #90a8c3;
+  color: white;
+  padding: 40px 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.description_p {
+  text-align: center;
+  margin: 60px;
+  font-size: 25;
+  color: white;
+}
+.about-me_p {
+  font-weight: bold;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.paragraph_p {
+  text-align: center;
+  font-size: 18px;
+  margin: 100px 0;
+  color: #333;
+}
+.container_p {
+  margin: 0px;
+}
+.contact-info_p {
+  background-color: #999595;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.contact-content_p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.image-box_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #030c2e;
+}
+.footer_p {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.image-box_p img {
+  width: 50%; 
+  height: auto; 
+  max-width: 100%; 
+}
+.horizontal-box_p {
+  border: 2px solid #030c2e; 
+  background-color: #90a8c3;
+  padding: 10px; 
+  height: auto; 
+  display: inline-block; 
+  border-radius: 10px; 
+  border-color: #030c2e;
+}

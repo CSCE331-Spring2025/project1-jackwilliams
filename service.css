@@ -1,10 +1,14 @@
+
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: #303030;
+  min-height: 100vh;
+  background: linear-gradient(to top, #90a8c3, #070e28) no-repeat;
 }
+
+
 .navbar_s {
   display: flex;
   justify-content: center;
@@ -20,15 +24,26 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   border: 2px solid transparent;
+
+
+  transition: 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease, 
+    background-color 0.2s ease;
 }
 .nav-item_s:hover {
   background-color: #555;
   cursor: pointer;
+
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 }
 .nav-item_s.active {
   border: 2px solid white;
   background-color: #444;
 }
+
+
 .header_s {
   text-align: center;
   background-color: #90a8c3;
@@ -38,10 +53,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+
 .description_s {
   text-align: center;
   margin: 60px;
-  font-size: 25;
+  font-size: 35px; 
   color: white;
 }
 .about-me_s {
@@ -57,6 +74,8 @@ body {
   margin: 100px 0;
   color: #333;
 }
+
+
 .container_s {
   margin: 0px;
 }
@@ -78,29 +97,56 @@ body {
   align-items: center;
   height: 400px;
 }
-.image-box_s {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .footer_s {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
   font-size: 14px;
 }
-.image-box_s img {
-  width: 50%;
-  height: auto;
-  max-width: 100%;
+
+
+.image-box_s {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 2%;
+
+  transform: scale(1.02);
+  padding-bottom: 20px;
 }
+.horizontal-box_s {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 2%;
+  border-color: #030c2e;
+}
+
+
+.image-box_s img {
+  display: block;
+  width: 120%;      
+  max-width: 120%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 2%;
+  border: 2px solid #030c2e;
+
+}
+
+
 .horizontal-box_s {
   border: 2px solid #030c2e;
   background-color: #90a8c3;
   padding: 10px;
-  height: auto;
-  display: inline-block;
   border-radius: 10px;
-  display: block;
-  margin: 0 auto;
+}
+
+
+br {
+  display: none;
 }

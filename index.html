@@ -4,81 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack W Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <link id="theme-link" rel="stylesheet" href="index(og).css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-      <a href="genai.html" class="nav-item">AI</a>
-      <a href="service.html" class="nav-item">Service</a>
-      <a href="index.html" class="nav-item active">Jack W</a>
-      <a href="portfolio.html" class="nav-item">Portfolio</a>
-      <a href="qualifications.html" class="nav-item">Qualifications</a>
-    </div>
+    
+    <div class="wrapper">
 
-    <!-- Header -->
-    <div class="header">Jack Williams</div>
-    <div class="container">
-      <div class="contact-info">
-        <div class="contact-content">
-          <span class="email">Email: jack@casawilliams.com </span>
-          <span class="phone">Phone: 214-879-8851 </span>
-        </div>
+      <div class="navbar">
+        <a href="genai.html" class="nav-item">AI</a>
+        <a href="service.html" class="nav-item">Service</a>
+        <a href="index.html" class="nav-item active">Jack W</a>
+        <a href="portfolio.html" class="nav-item">Portfolio</a>
+        <a href="qualifications.html" class="nav-item">Qualifications</a>
+        <a id="styleSwitchBtn" class="nav-item">Switch Style</a>
       </div>
-    </div>
 
-    <div class="description">
-      <div class="about-me">About Me</div>
-    </div>
-
-    <br />
-
-    <div class="image-box">
+      <div class="header">Jack Williams</div>
       <div class="container">
-        <div class="section">
-          <div class="image-box">
-            <img src="Assets/Jack.jpg" alt="Jack" />
+        <div class="contact-info">
+          <div class="contact-content">
+            <span class="email">Email: jack@casawilliams.com </span>
+            <span class="phone">Phone: 214-879-8851 </span>
           </div>
         </div>
       </div>
-    </div>
-
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="horizontal-box">
+  
       <div class="description">
-        <p>
-          Howdy! My name is Jack and I am from Flower Mound Texas. I came to Texas
-          A&M University to study Computer engineering, and I chose computer engineering
-          because I liked programming but also wanted to learn more about hardware. I am 
-          very passionate about the things that I learn in class and have been very happy 
-          with my decision to choose computer engineering as my major. My favorite class 
-          so far has been my computer architecture class where I got the opportunity to 
-          build a functioning CPU using Verilog. More details about that project are listed 
-          in the portfolio section of this website. My interest in computer engineering came 
-          from my passion for building computers. I had built computers for myself and my 
-          friends, and I always wondered how the individual pieces worked. When I am not 
-          doing school, I love to participate in my student organization Aggie Lemons where 
-          we race cheap cars in endurance races. Most of the club's activities end up being 
-          us fixing our cars, but that is also very fun for me and my friends. In February 
-          I will be the next driver for our upcoming track day, which I am very excited about. 
-          Currently, I am looking for a summer of 2025 internship, so if you like what you see 
-          on my resume (in the qualifications section), and the rest of the website, feel free 
-          to reach out to me using my contact info at the top of the page. After college (or 
-          during an internship) I am interested in working in a design verification, ASIC design, 
-          or software engineering position, but I am open to other work if the opportunity comes 
-          up as long as they are at least mildly interesting. Check out the other pages on this 
-          website to learn more about me!
-
-
-        </p>
+        <div class="about-me">About Me</div>
       </div>
+  
+      <br />
+      
+      <div class="div-flex">
+        <div class="image-box">
+        <img src="Assets/Jack.jpg" alt="Jack" />
+        </div>
+    
+        <div class="horizontal-box">
+          <div class="description">
+            <p>
+              Howdy! My name is Jack and I am from Flower Mound Texas. I came to Texas
+              A&M University to study Computer engineering, and I chose computer engineering
+              because I liked programming but also wanted to learn more about hardware. I am 
+              very passionate about the things that I learn in class and have been very happy 
+              with my decision to choose computer engineering as my major. My favorite class 
+              so far has been my computer architecture class where I got the opportunity to 
+              build a functioning CPU using Verilog. More details about that project are listed 
+              in the portfolio section of this website. My interest in computer engineering came 
+              from my passion for building computers. I had built computers for myself and my 
+              friends, and I always wondered how the individual pieces worked. When I am not 
+              doing school, I love to participate in my student organization Aggie Lemons where 
+              we race cheap cars in endurance races. Most of the club's activities end up being 
+              us fixing our cars, but that is also very fun for me and my friends. In February 
+              I will be the next driver for our upcoming track day, which I am very excited about. 
+              Currently, I am looking for a summer of 2025 internship, so if you like what you see 
+              on my resume (in the qualifications section), and the rest of the website, feel free 
+              to reach out to me using my contact info at the top of the page. After college (or 
+              during an internship) I am interested in working in a design verification, ASIC design, 
+              or software engineering position, but I am open to other work if the opportunity comes 
+              up as long as they are at least mildly interesting. Check out the other pages on this 
+              website to learn more about me!
+    
+    
+            </p>
+          </div>
+        </div>
+      </div>
+      
     </div>
+    
+    <script>
 
-    <br />
-    <br />
+      const switchBtn = document.getElementById('styleSwitchBtn');
+      const themeLink = document.getElementById('theme-link');
+
+      switchBtn.addEventListener('click', function() {
+
+        if (themeLink.getAttribute('href') === 'index(og).css') {
+          themeLink.setAttribute('href', 'index.css');
+        } else {
+          themeLink.setAttribute('href', 'index(og).css');
+        }
+      });
+    </script>
+    
   </body>
 </html>

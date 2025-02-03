@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack W Portfolio</title>
-    <link rel="stylesheet" href="qualifications.css" />
+    <link id="theme-link" rel="stylesheet" href="qualifications(og).css" />
   </head>
   <body>
     <div class="navbar_q">
@@ -13,6 +13,7 @@
       <a href="index.html" class="nav-item_q">Jack W</a>
       <a href="portfolio.html" class="nav-item_q">Portfolio</a>
       <a href="qualifications.html" class="nav-item_q active">Qualifications</a>
+      <a id="styleSwitchBtn" class="nav-item_q">Switch Style</a>
     </div>
 
     <div class="header_q">Jack Williams</div>
@@ -31,7 +32,6 @@
       </div>
     </div>
 
-    <br /><br /><br />
 
     <div class="image-box_q">
       <iframe
@@ -67,5 +67,20 @@
         </li>
       </ul>
     </div>
+
+    <script>
+
+      const switchBtn = document.getElementById('styleSwitchBtn');
+      const themeLink = document.getElementById('theme-link');
+
+      switchBtn.addEventListener('click', function() {
+
+        if (themeLink.getAttribute('href') === 'qualifications(og).css') {
+          themeLink.setAttribute('href', 'qualifications.css');
+        } else {
+          themeLink.setAttribute('href', 'qualifications(og).css');
+        }
+      });
+    </script>
   </body>
 </html>

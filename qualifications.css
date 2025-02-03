@@ -3,8 +3,9 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: #303030;
+  background: linear-gradient(to top, #90a8c3, #070e28) no-repeat;
 }
+
 .navbar_q {
   display: flex;
   justify-content: center;
@@ -12,6 +13,7 @@ body {
   background-color: #333;
   padding: 10px 0;
 }
+
 .nav-item_q {
   margin: 0 20px;
   color: white;
@@ -20,15 +22,21 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
+
 .nav-item_q:hover {
   background-color: #555;
   cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 }
+
 .nav-item_q.active {
   border: 2px solid white;
   background-color: #444;
 }
+
 .header_q {
   text-align: center;
   background-color: #90a8c3;
@@ -38,12 +46,14 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .description_q {
   text-align: center;
   margin: 60px;
   font-size: 25px;
   color: white;
 }
+
 .about-me_q {
   font-weight: bold;
   font-size: 34px;
@@ -51,20 +61,24 @@ body {
   margin-top: 10px;
   color: #ffffff;
 }
+
 .paragraph_q {
   text-align: center;
   font-size: 18px;
   margin: 100px 0;
   color: #333;
 }
+
 .container_q {
   margin: 0px;
 }
+
 .contact-info_q {
   background-color: #999595;
   padding: 10px 20px;
   font-size: 14px;
 }
+
 .contact-content_q {
   display: flex;
   justify-content: space-between;
@@ -72,23 +86,79 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+
 .section_q {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px;
 }
+
+/* ================================
+   SIDE-BY-SIDE LAYOUT FOR RESUME & TEXT
+   ================================ */
+
+/* Resume container: inline-block so it sits side-by-side with the text.
+   Left padding is added so it isn’t flush with the viewport edge. */
 .image-box_q {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding-left: 40px;
 }
+
+/* Override the iframe styling:
+   - width fills the container
+   - height is set to 1700px to closely match the resume content (adjust if needed)
+*/
+/* 1) Remove forced scaling and large fixed height */
+.image-box_q iframe {
+  width: 100% !important;
+  height: 1200px !important; /* pick a smaller height that fits most of your PDF */
+  border: none;              /* remove the default border */
+  display: block;            /* removes inline spacing issues */
+  margin: 0 auto;
+  transform: scale(.8);
+
+  /* transform: scale(.9);   <-- remove or comment out if you don't need to scale */
+  /* transform-origin: 0 0;  <-- also remove unless you're specifically positioning/scaling */
+}
+
+
+/* Bullet-points container:
+   - inline-block and vertical-align: middle ensure it sits next to the resume
+   - increased font-size and line-height make the text larger and more spaced out */
+.bullet-points_q {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;  /* Adjust as needed */
+  box-sizing: border-box;
+  /* padding: 0 20px; */
+  padding-left: 30px;
+  font-size: 32px;
+  line-height: 1.8;
+  color: white;
+  margin: 30px auto;
+}
+
+/* Center the "Skills" header over the bullet points */
+.bullet-points_q h2 {
+  text-align: center;
+}
+
+/* Hide extra <br> tags that might force unwanted spacing between the two containers */
+.image-box_q + br,
+.image-box_q + br + br {
+  display: none;
+}
+
 .footer_q {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
   font-size: 14px;
 }
+
 .horizontal-box_q {
   border: 2px solid #030c2e;
   background-color: #90a8c3;
@@ -96,10 +166,4 @@ body {
   height: auto;
   display: inline-block;
   border-radius: 10px;
-}
-.bullet-points_q {
-  color: white;
-  margin: 30px auto;
-  font-size: 20px;
-  max-width: 80%;
 }
